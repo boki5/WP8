@@ -31,6 +31,20 @@ namespace labJMMWP8
             //PicerijaDB.PicerijaItems.InsertOnSubmit(newToDo); 
  }
 
+        private void VoRedKlik(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OtkaziKlik(object sender, EventArgs e)
+        {
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
+
+        }
+
 
 
 

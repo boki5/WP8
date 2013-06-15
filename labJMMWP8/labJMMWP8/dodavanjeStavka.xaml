@@ -28,8 +28,35 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="456"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Име:" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,103,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="456"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Адреса:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,175,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="456"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,279,0,0" TextWrapping="Wrap" Text="Лонгитуда:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="243,279,0,0" TextWrapping="Wrap" Text="Латитуда:" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,306,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="222"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="227,306,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="219"/>
         </Grid>
     </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+
+            <shell:ApplicationBarIconButton 
+                x:Name="appBarOkButton" 
+                IconUri="/Images/appbar.check.rest.png" 
+                Text="ok" 
+                Click="VoRedKlik"/>
+
+            <shell:ApplicationBarIconButton 
+                x:Name="appBarCancelButton" 
+                IconUri="/Images/appbar.cancel.rest.png" 
+                Text="cancel" 
+                Click="OtkaziKlik"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

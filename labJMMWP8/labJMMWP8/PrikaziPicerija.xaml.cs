@@ -16,5 +16,10 @@ namespace labJMMWP8
         {
             InitializeComponent();
         }
+
+        private void prikaziMapa(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MapaLokacija.xaml", UriKind.Relative));
+        }
     }
 }
