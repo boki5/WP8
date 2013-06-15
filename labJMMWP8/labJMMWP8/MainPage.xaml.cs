@@ -13,9 +13,20 @@ namespace labJMMWP8
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        public int selektirano;
         // Constructor
         public MainPage()
         {
+            using (PicerijaDataContext db = new PicerijaDataContext("isostore:/Picerija.sdf"))
+            {
+                if (db.DatabaseExists() == false)
+                {
+                    // Create the database.
+                    db.CreateDatabase();
+                }
+            }
+
+
             InitializeComponent();
 
             // Set the data context of the listbox control to the sample data
@@ -39,7 +50,21 @@ namespace labJMMWP8
 
         }
 
-        // Sample code for building a localized ApplicationBar
+
+               private void dodadi(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/dodavanjeStavka.xaml", UriKind.Relative));
+        }
+
+               private void selektiranaPicerija(object sender, SelectionChangedEventArgs e)
+               {
+                   //selektirano = ((PicerijaItem)(((LongListSelector)sender).SelectedItem)).PicerijaItemId;
+                   NavigationService.Navigate(new Uri("/PrikaziPicerija.xaml", UriKind.Relative));
+                   
+               }
+
+
+         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{
         //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
